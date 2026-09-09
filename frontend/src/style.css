@@ -1,0 +1,536 @@
+/* =========================================================
+   CONFIGURAÇÕES GERAIS
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  background:
+    radial-gradient(
+      circle at top,
+      #242424 0%,
+      #111111 45%,
+      #080808 100%
+    );
+
+  color: #ffffff;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.topo {
+  width: 100%;
+
+  background: #0a0a0a;
+
+  border-bottom: 3px solid #d40707;
+
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
+}
+
+.topo-conteudo {
+  width: min(900px, 92%);
+
+  margin: auto;
+
+  min-height: 70px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: #ffffff;
+
+  font-size: 20px;
+
+  font-weight: bold;
+
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #d40707;
+
+  font-size: 26px;
+
+  font-weight: bold;
+}
+
+.topo-texto {
+  color: #888888;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   CONTAINER PRINCIPAL
+========================================================= */
+
+.container {
+  width: min(900px, 92%);
+
+  margin: 55px auto;
+}
+
+
+/* =========================================================
+   APRESENTAÇÃO
+========================================================= */
+
+.apresentacao {
+  margin-bottom: 35px;
+
+  padding-left: 18px;
+
+  border-left: 5px solid #d40707;
+}
+
+.apresentacao h1 {
+  color: #d40707;
+
+  font-size: 38px;
+
+  margin-bottom: 8px;
+}
+
+.apresentacao p {
+  color: #aaaaaa;
+
+  font-size: 16px;
+}
+
+
+/* =========================================================
+   FORMULÁRIO
+========================================================= */
+
+.formulario {
+  display: flex;
+
+  gap: 12px;
+
+  padding: 20px;
+
+  margin-bottom: 28px;
+
+  background: #171717;
+
+  border: 1px solid #303030;
+
+  border-radius: 12px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.formulario input {
+  flex: 1;
+
+  padding: 14px 16px;
+
+  background: #0d0d0d;
+
+  color: #ffffff;
+
+  border: 1px solid #3a3a3a;
+
+  border-radius: 8px;
+
+  outline: none;
+
+  font-size: 16px;
+
+  transition: 0.2s;
+}
+
+.formulario input::placeholder {
+  color: #777777;
+}
+
+.formulario input:focus {
+  border-color: #d40707;
+
+  box-shadow:
+    0 0 0 2px rgba(0, 255, 38, 0.15);
+}
+
+
+/* =========================================================
+   BOTÃO ADICIONAR
+========================================================= */
+
+.formulario button {
+  padding: 14px 24px;
+
+  background: #d40707;
+
+  color: #ffffff;
+
+  border: none;
+
+  border-radius: 8px;
+
+  font-weight: bold;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.formulario button:hover {
+  background: #d40707;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   LISTA DE TAREFAS
+========================================================= */
+
+.lista {
+  display: grid;
+
+  gap: 14px;
+}
+
+
+/* =========================================================
+   CARD DA TAREFA
+========================================================= */
+
+.tarefa {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 20px;
+
+  background: #171717;
+
+  border: 1px solid #2d2d2d;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+
+  transition: 0.2s;
+}
+
+
+/* Barra amarela na lateral */
+
+.tarefa::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 4px;
+
+  height: 100%;
+
+  background: #d40707;
+}
+
+.tarefa:hover {
+  transform: translateY(-2px);
+
+  border-color: #555555;
+
+  background: #1c1c1c;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================================
+   TEXTO DA TAREFA
+========================================================= */
+
+.tarefa h2 {
+  margin: 0 0 7px;
+
+  font-size: 18px;
+
+  color: #ffffff;
+}
+
+.tarefa span {
+  display: inline-block;
+
+  padding: 4px 9px;
+
+  background: #292929;
+
+  color: #bbbbbb;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+
+  font-weight: bold;
+}
+
+
+/* =========================================================
+   TAREFA CONCLUÍDA
+========================================================= */
+
+.tarefa h2.concluida {
+  text-decoration: line-through;
+
+  color: #777777;
+}
+
+.tarefa h2.concluida + span {
+  background: rgba(38, 255, 0, 0.12);
+
+  color: #d40707;
+}
+
+
+/* =========================================================
+   BOTÕES DAS TAREFAS
+========================================================= */
+
+.acoes {
+  display: flex;
+
+  gap: 8px;
+}
+
+.acoes button {
+  padding: 9px 14px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+/* Botão concluir / reabrir */
+
+.acoes button:first-child {
+  background: #d40707;
+
+  color: #ffffff;
+}
+
+.acoes button:first-child:hover {
+  background: #d40707;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   BOTÃO EXCLUIR
+========================================================= */
+
+.botao-excluir {
+  background: #292929 !important;
+
+  color: #eeeeee !important;
+
+  border: 1px solid #444444 !important;
+}
+
+.botao-excluir:hover {
+  background: #c62828 !important;
+
+  border-color: #c62828 !important;
+
+  color: #ffffff !important;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   MENSAGEM DE ERRO
+========================================================= */
+
+.erro {
+  margin-bottom: 20px;
+
+  padding: 14px 16px;
+
+  background: #351313;
+
+  color: #ff8a80;
+
+  border-left: 4px solid #e53935;
+
+  border-radius: 7px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.rodape {
+  width: 100%;
+
+  margin-top: 70px;
+
+  padding: 30px 20px;
+
+  text-align: center;
+
+  background: #0a0a0a;
+
+  border-top: 1px solid #292929;
+}
+
+.rodape p {
+  margin-bottom: 8px;
+
+  color: #cccccc;
+
+  font-size: 14px;
+}
+
+.rodape span {
+  color: #666666;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  /* HEADER */
+
+  .topo-conteudo {
+    min-height: 80px;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 5px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .topo-texto {
+    font-size: 12px;
+  }
+
+
+  /* CONTEÚDO */
+
+  .container {
+    margin: 35px auto;
+  }
+
+  .apresentacao h1 {
+    font-size: 30px;
+  }
+
+  .apresentacao p {
+    font-size: 14px;
+  }
+
+
+  /* FORMULÁRIO */
+
+  .formulario {
+    flex-direction: column;
+  }
+
+  .formulario button {
+    width: 100%;
+  }
+
+
+  /* TAREFAS */
+
+  .tarefa {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .acoes {
+    width: 100%;
+  }
+
+  .acoes button {
+    flex: 1;
+  }
+
+
+  /* FOOTER */
+
+  .rodape {
+    margin-top: 50px;
+  }
+
+}
