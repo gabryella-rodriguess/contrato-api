@@ -42,27 +42,19 @@ input {
 
 .topo {
   width: 100%;
-
   background: #0a0a0a;
-
   border-bottom: 3px solid #d40707;
-
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
 }
 
 .topo-conteudo {
   width: min(900px, 92%);
-
   margin: auto;
-
   min-height: 70px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
-
   gap: 20px;
 }
 
@@ -73,31 +65,23 @@ input {
 
 .logo {
   display: flex;
-
   align-items: center;
-
   gap: 10px;
 
   color: #ffffff;
-
   font-size: 20px;
-
   font-weight: bold;
-
   letter-spacing: 1px;
 }
 
 .logo span {
   color: #d40707;
-
   font-size: 26px;
-
   font-weight: bold;
 }
 
 .topo-texto {
   color: #888888;
-
   font-size: 14px;
 }
 
@@ -108,7 +92,6 @@ input {
 
 .container {
   width: min(900px, 92%);
-
   margin: 55px auto;
 }
 
@@ -119,23 +102,18 @@ input {
 
 .apresentacao {
   margin-bottom: 35px;
-
   padding-left: 18px;
-
   border-left: 5px solid #d40707;
 }
 
 .apresentacao h1 {
   color: #d40707;
-
   font-size: 38px;
-
   margin-bottom: 8px;
 }
 
 .apresentacao p {
   color: #aaaaaa;
-
   font-size: 16px;
 }
 
@@ -146,17 +124,13 @@ input {
 
 .formulario {
   display: flex;
-
   gap: 12px;
 
   padding: 20px;
-
   margin-bottom: 28px;
 
   background: #171717;
-
   border: 1px solid #303030;
-
   border-radius: 12px;
 
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
@@ -168,15 +142,12 @@ input {
   padding: 14px 16px;
 
   background: #0d0d0d;
-
   color: #ffffff;
 
   border: 1px solid #3a3a3a;
-
   border-radius: 8px;
 
   outline: none;
-
   font-size: 16px;
 
   transition: 0.2s;
@@ -190,7 +161,7 @@ input {
   border-color: #d40707;
 
   box-shadow:
-    0 0 0 2px rgba(0, 255, 38, 0.15);
+    0 0 0 2px rgba(212, 7, 7, 0.15);
 }
 
 
@@ -201,62 +172,56 @@ input {
 .formulario button {
   padding: 14px 24px;
 
-  background: #d40707;
+  background: #ffffff;
+  color: #9c0404;
 
-  color: #ffffff;
-
-  border: none;
-
+  border: 1px solid #ffffff;
   border-radius: 8px;
 
   font-weight: bold;
-
   font-size: 15px;
 
   cursor: pointer;
-
   transition: 0.2s;
 }
 
 .formulario button:hover {
   background: #d40707;
+  border-color: #d40707;
+  color: #ffffff;
 
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 
 
 /* =========================================================
-   LISTA DE TAREFAS
+   LISTA DE PRODUTOS
 ========================================================= */
 
 .lista {
   display: grid;
-
   gap: 14px;
 }
 
 
 /* =========================================================
-   CARD DA TAREFA
+   CARD DO PRODUTO
 ========================================================= */
 
-.tarefa {
+.produto {
   position: relative;
 
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
 
   gap: 20px;
 
   padding: 20px;
 
-  background: #171717;
+  background: #211d24;
 
-  border: 1px solid #2d2d2d;
-
+  border: 1px solid #514554;
   border-radius: 12px;
 
   overflow: hidden;
@@ -267,98 +232,88 @@ input {
 }
 
 
-/* Barra amarela na lateral */
+/* =========================================================
+   BARRA VERMELHA LATERAL
+========================================================= */
 
-.tarefa::before {
+.produto::before {
   content: "";
 
   position: absolute;
 
   top: 0;
-
   left: 0;
 
   width: 4px;
-
   height: 100%;
 
   background: #d40707;
 }
 
-.tarefa:hover {
-  transform: translateY(-2px);
+.produto:hover {
+  border-color: #d40707;
 
-  border-color: #555555;
+  background: #252127;
 
-  background: #1c1c1c;
-
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  box-shadow:
+    0 8px 22px rgba(212, 7, 7, 0.12);
 }
 
 
 /* =========================================================
-   TEXTO DA TAREFA
+   NOME DO PRODUTO
 ========================================================= */
 
-.tarefa h2 {
+.produto h2 {
   margin: 0 0 7px;
 
   font-size: 18px;
-
   color: #ffffff;
 }
 
-.tarefa span {
-  display: inline-block;
-
-  padding: 4px 9px;
-
-  background: #292929;
-
-  color: #bbbbbb;
-
-  border-radius: 20px;
-
-  font-size: 12px;
-
-  font-weight: bold;
-}
-
 
 /* =========================================================
-   TAREFA CONCLUÍDA
+   PREÇO
 ========================================================= */
 
-.tarefa h2.concluida {
-  text-decoration: line-through;
+.produto span {
+  display: inline-flex;
 
-  color: #777777;
-}
+  align-items: center;
+  justify-content: center;
 
-.tarefa h2.concluida + span {
-  background: rgba(38, 255, 0, 0.12);
+  padding: 6px 12px;
 
-  color: #d40707;
+  background: #29252c;
+  color: #ffffff;
+
+  border: 1px solid #514554;
+  border-radius: 999px;
+
+  font-size: 13px;
+  font-weight: bold;
+
+  line-height: 1;
+
+  white-space: nowrap;
 }
 
 
 /* =========================================================
-   BOTÕES DAS TAREFAS
+   BOTÕES DOS PRODUTOS
 ========================================================= */
 
 .acoes {
   display: flex;
-
   gap: 8px;
 }
 
 .acoes button {
-  padding: 9px 14px;
+  padding: 10px 18px;
 
-  border: none;
+  border-radius: 8px;
 
-  border-radius: 7px;
-
+  font-size: 15px;
   font-weight: bold;
 
   cursor: pointer;
@@ -367,16 +322,24 @@ input {
 }
 
 
-/* Botão concluir / reabrir */
+/* =========================================================
+   BOTÃO EDITAR - VERMELHO
+========================================================= */
 
 .acoes button:first-child {
-  background: #d40707;
+  background: #d40707 !important;
 
-  color: #ffffff;
+  color: #ffffff !important;
+
+  border: 1px solid #d40707 !important;
 }
 
 .acoes button:first-child:hover {
-  background: #d40707;
+  background: #ff1a1a !important;
+
+  border-color: #ff1a1a !important;
+
+  color: #505050 !important;
 
   transform: translateY(-1px);
 }
@@ -432,7 +395,6 @@ input {
   width: 100%;
 
   margin-top: 70px;
-
   padding: 30px 20px;
 
   text-align: center;
@@ -446,13 +408,11 @@ input {
   margin-bottom: 8px;
 
   color: #cccccc;
-
   font-size: 14px;
 }
 
 .rodape span {
   color: #666666;
-
   font-size: 13px;
 }
 
@@ -462,8 +422,6 @@ input {
 ========================================================= */
 
 @media (max-width: 650px) {
-
-  /* HEADER */
 
   .topo-conteudo {
     min-height: 80px;
@@ -484,8 +442,6 @@ input {
   }
 
 
-  /* CONTEÚDO */
-
   .container {
     margin: 35px auto;
   }
@@ -499,8 +455,6 @@ input {
   }
 
 
-  /* FORMULÁRIO */
-
   .formulario {
     flex-direction: column;
   }
@@ -510,9 +464,7 @@ input {
   }
 
 
-  /* TAREFAS */
-
-  .tarefa {
+  .produto {
     flex-direction: column;
 
     align-items: stretch;
@@ -527,10 +479,7 @@ input {
   }
 
 
-  /* FOOTER */
-
   .rodape {
     margin-top: 50px;
   }
-
 }
